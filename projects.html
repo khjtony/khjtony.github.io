@@ -6,14 +6,14 @@ title: Projects
 
   <div class="project-container">
     <h1>Projects</h1>
-    <p>Some of the things I've dabbled on.</p>
+    <p>Projects that I own</p>
     <br><center>
     <a href="#"><span class="label label-danger">Photography</span></a>
     <a href="#"><span class="label label-danger light">Coding</span></a></center>
   </div>
 
   <div class="container"
-    {% for post in site.project %}
+    {% for post in site.projects %}
     <li><span><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><time class="pull-right post-list">{{ post.date | date_to_string | date: "%b %-d, %Y"  }}</h4></time></span></span></li>
     {% endfor %}
   </div>
