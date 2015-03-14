@@ -60,9 +60,9 @@ Only want to make band works first, with some expand potential, rather than stru
 
 ### Then we design case for it
 Things left became straight forward. Yunan designed cases for us. We wanna wear it, so each node should have curve to fit our ankle, and we plan to sew nodes and batteries on an elastic band, which will make it comfortable.
-![snake_band_sd]({{ site.baseurl }}/images/NaughtyBall/snake_sd_1.jpg)  
-![snake_band]({{ site.baseurl }}/images/NaughtyBall/snake_3.jpg)  
-![snake_band]({{ site.baseurl }}/images/NaughtyBall/snake_4.jpg) 
+![snake_band_sd]({{ site.baseurl }}/images/NaughtyBall/snake_sd_2.png)  
+![snake_band]({{ site.baseurl }}/images/NaughtyBall/snake_3.png)  
+![snake_band]({{ site.baseurl }}/images/NaughtyBall/snake_4.png) 
 
 
 ### Beta product
