@@ -1,5 +1,5 @@
 ---
-title: Project: Naughty Ball
+title: Project-Naughty Ball
 date: 2015-03-11 12:11:16
 categories: Project
 ---
