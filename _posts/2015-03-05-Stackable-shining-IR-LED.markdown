@@ -52,7 +52,7 @@ Our first version schematic is:
 ![snake_band_ad_1]({{ site.baseurl }}/images/NaughtyBall/snake_band_01.png)  
 However, even before I finish schematic and put parts onto PCB design, I found that even using SSOP footprint chips is too large to fit in a 1 inch sqaure tiny board, which was so sad.
 
-- Version 1
+- Version 1  
 Simpler! Simpler! Simpler! Things may go out of control right now! Let's sit down and solve problem straightly and quickly!
 Only want to make band works first, with some expand potential, rather than struggling in details, I came up with temporary final design. Still using 4-pins strategy, but 3 of them are power, and left one is ground. We will power on each node by simply turning on one of three power pins. That's it.  
 ![snake_band_1]({{ site.baseurl }}/images/NaughtyBall/snake_band_1.png)
