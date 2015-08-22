@@ -34,9 +34,12 @@ Positioning system uses two way ranging method, which is specified in applicatio
 ![DW1000 TWR]({{ site.baseurl }}/images/Heimdall/DW1000TWR.png) 
 
 #### Testing setup
-![DWM1000 tag]({{ site.baseurl }}/images/Heimdall/DWM1000_left.png) 
+![DWM1000 tag]({{ site.baseurl }}/images/Heimdall/firstTest_left.png) 
+
 This is tag node, whcih powered by a mobile power, and put on my bed.
-![DWM1000 Anchor]({{ site.baseurl }}/images/Heimdall/DWM1000_right.png) 
+
+![DWM1000 Anchor]({{ site.baseurl }}/images/Heimdall/firstTest_right.png) 
+
 This is anchor, which reads the actual distance and show it on the laptop.
 There is no block or wall between two nodes, and there is no other engaged DWM1000 module in the range.
 
