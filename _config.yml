@@ -1,7 +1,7 @@
 name: Hengjiu Kang
 author: Hengjiu Kang
 baseurl: ""
-description: My Showcase
+description: IAC Space Station
 github: http://www.github.com/khjtony
 facebook: https://www.facebook.com/hengjiu.kang
 linkedin: https://www.linkedin.com/hp/?dnr=DylH0KmN16e6ZDxuDybr-FYW6DiHZltw3LFk
@@ -19,6 +19,11 @@ redcarpet:
   extensions: ["tables"]
 
 defaults:
+  # global definition
+  - scope:
+      path: ""
+    values:
+      excerpt_separator: <!--more-->
   - scope:
       path: ""
       type: "pages"

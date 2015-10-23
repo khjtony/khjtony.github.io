@@ -2,6 +2,7 @@
 title: Naugthyball-Testing eyes
 date: 2015-03-13 10:11:16
 categories: Project
+project: NaughtyBall
 ---
 ![Ultimaker2]({{ site.baseurl }}/images/NaughtyBall/eyes.png)
 

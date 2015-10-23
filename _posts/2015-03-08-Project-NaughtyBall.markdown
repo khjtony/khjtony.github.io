@@ -2,6 +2,7 @@
 title: Project-Naughty Ball
 date: 2015-03-11 12:11:16
 categories: Project
+project: NaughtyBall
 ---
 
 
@@ -34,5 +35,5 @@ categories: Project
 * [MIT](http://opensource.org/licenses/MIT)
 
 -------------
-Our Project: NaughtyBall has reached end of winter quarter 2015, but we will continually work on it until the day it become the one that we like.
+Our Project: NaughtyBall has reached its end of winter quarter 2015 due to the end of the design course it belongs to.
 

@@ -2,6 +2,7 @@
 title: Use 3D printer to boost up Design
 date: 2015-03-10 12:11:16
 categories: Project
+project: NaughtyBall
 ---
 
 ![Ultimaker2]({{ site.baseurl }}/images/NaughtyBall/3D_printer.jpg)

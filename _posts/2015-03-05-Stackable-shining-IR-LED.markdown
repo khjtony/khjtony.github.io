@@ -2,6 +2,7 @@
 title: Stackable shining IR LED
 date: 2015-03-5 10:11:16
 categories: Project
+project: NaughtyBall
 ---
 ![Ultimaker2]({{ site.baseurl }}/images/NaughtyBall/snake_1.JPG)
 
