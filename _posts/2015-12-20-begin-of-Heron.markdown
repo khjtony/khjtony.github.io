@@ -59,7 +59,7 @@ Limited by budget, time and knowledge, this project consists of three stages. No
 ## First Stage
 First stage is the most important fundamental part for this project. During this stage, I need to develop a powerful and reliable power system and physical structure.
 
-By now I have installed a roof rack system and remove one rear seat. I plan to install all the antennas, cameras, Manipulators and guars on the roof, and install all the devices equipments include batteries on the rear seat room, then I dont need to occupy the rest of space.
+By now I have installed a roof rack system and removed one rear seat. I plan to install all the antennas, cameras, Manipulators and guards on the roof, and install all the devices equipments including batteries on the rear seat space, thus I dont need to occupy the rest of space.
 
 ### Roof rail
 ![Roof Rail]({{ site.baseurl }}/images/IAC_Heron/IAC_Heron_Band.png)
