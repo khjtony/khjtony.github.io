@@ -5,7 +5,6 @@ categories: Project
 project: TinyCar
 ---
 
-
 ![Track]({{ site.baseurl }}/images/TinyCar/natcar.png)
 
 ## Post overview
