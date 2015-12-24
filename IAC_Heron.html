@@ -1,0 +1,42 @@
+---
+title: Heron
+project: Heron
+---
+  <div class="container">
+  </div>
+
+
+  <style>
+  .project-container{background-image: url("/images/IAC_Heron/IAC_Heron_Band.png")}
+  </style>
+
+  <div class="project-container">
+    <h1>IAC project: Heron</h1>
+    <br><center>
+ 
+  </div>
+
+  </div>
+  <div class="recent-posts">
+  <h1>Recent Posts</h1>
+  {% for post in site.posts %}
+  	{% if post.project == page.project%}
+    <ul class="homepage-posts {{ add_class }}">
+      <li>
+        <span>
+          <h4>
+            <a href="{{ site.baseurl }}{{ post.url }}">
+              {{ post.title }}
+            </a>
+            {{ fresh_tag }}
+            <time class="pull-right">
+              {{ post.date | date_to_string | date: "%b %-d, %Y"  }}
+            </time>
+          </h4>
+        </span>
+      </li>
+    </ul>
+    {% endif %}
+  {% endfor %}
+</div>
+
