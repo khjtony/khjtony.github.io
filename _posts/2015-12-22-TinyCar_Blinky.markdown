@@ -1,5 +1,5 @@
 ---
-title: Blinky program on STM32F4 with FreeRTOS, STMCube, Keil and HAL
+title: Blinky on STM32F4 with FreeRTOS, STMCube and HAL
 date: 2015-12-22 20:30:49
 categories: Project
 project: TinyCar
@@ -14,6 +14,7 @@ project: TinyCar
 >* STMCube Setup
 >* Real code
 >* Blink!
+>* Bonus: PWM
 
 
 
