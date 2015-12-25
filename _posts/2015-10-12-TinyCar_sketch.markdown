@@ -68,7 +68,7 @@ Each motor needs two MOSFET and one H-Bridge IC, and two MOSFETs will be put und
 ## TinyCar IMU
 IMU is short of "Inertial Measurement Unit", and often used in Inertial Navigation system. Our TinyCar needs IMU to simulate/draw the trace map in the first run, and guide the car runing in an optimized route in the second and further run. We are not only optimize the route in the second run, but will also fully guide the car in some complex trace like "step function part", which require a very precise IMU. Also, the TinyCar has lot of vibration both containing the low frequency part, from the chassis, and high frequency part, from dynamic motors and downforce motors. However, we only need inertial navigation keep its precision in short time/short range, because the course is short, and we have powerful CPU to do the complex algorithm, like Kalman filter, which can do our a little bit favor.
 
-![IMU]({{ site.baeurl}}/images/TInyCar/IMU_both.png)
+![IMU]({{ site.baeurl}}/images/TinyCar/IMU_both.png)
 There are many 9-axis IMU chip on the market, but I bought two of them to evaluate.
 
 - LSM9DS0
