@@ -13,6 +13,7 @@ project: IAC_Heron
 >* Fabrication
 >* Installation
 >* Battery and Drawer
+>* What's next
 
 
 ## New Solidworks design
@@ -62,6 +63,10 @@ A large capacity auxiliary battery is necessary to keep central computer, Survei
 
 ![Battery]({{ site.baseurl }}/images/IAC_Heron/Rack/battery_raw.png)
 
+## What's next
+The next step is installing fundamental electricities, including battery isolator, fuses, switchs, lights and others.
+
+![Buy list]({{ site.baseurl }}/images/IAC_Heron/fundElectrical/buylist.png)
 
 
 ### License
