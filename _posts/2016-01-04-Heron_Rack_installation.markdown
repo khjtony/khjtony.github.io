@@ -30,7 +30,7 @@ Vibration lossnening is another problem that I need to solve. According to video
 
 As an experimental solution, I bought self-lock bolts and lock nuts. Let's what's going on after days and months.
 
-<!-- [Self-locking bolt] -->
+![Self-locking bolt]({{ site.baseurl }}/images/IAC_Heron/Rack/lockbolt.png)
 
 ## Fabrication
 ![ESF work]({{ site.baseurl }}/images/IAC_Heron/Rack/angle_fab.png)
