@@ -17,6 +17,8 @@ project: IAC_Heron
 ## What is SDR
 SDR refers to *Software Defined Radio*, and it is a versatile way to receive wide band RF signal. Usually the SDR products are just receivers and can not transmit.
 
+![RTL-SDR bare]({{ site.baseurl }}/images/IAC_Heron/SDR/bare_board.png)
+
 RTL-SDR referes to RTL2832U chip based SDR, which is a budget-friendly SDR solution for entry level people, like me. Also, RTL-SDR has many "edition", and the most famous one may be the kit designed by BA5SBA, who extend the reseive band from VHF to HF~VHF, then you dont need upconverter to receive HF band signal.
 
 ## Assemble
@@ -27,6 +29,8 @@ Here is a link I found that is helpful:
 
 If you have problem in step 9, here is hint:
 The purpose of two fly wires is connecting the side capacitor with the power/VCC, so two wires are soldered on the pins of regulators on the both sides.
+
+![RTL-SDR assembled]({{ site.baseurl }}/images/IAC_Heron/SDR/assembled.png)
 
 
 ## Test
