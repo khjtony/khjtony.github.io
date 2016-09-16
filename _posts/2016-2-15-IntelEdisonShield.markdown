@@ -33,6 +33,7 @@ But what is the most important feature for us, is that Intel edison is built in 
 ![Intel Edison break out board]({{ site.baseurl }}/images/UAV/intel_edison_breakout.jpg)
 
 ## Desgin criterias
+
 ### Baseline functionality
 In our design, as companion computer, Intel Edison must be able to setup mavlink to pixhawk over Serial port, so the baseline functionality is power regulation circuit and UART connection circuit.
 
@@ -74,7 +75,7 @@ Expansion Shield is nontrivial design. I layout more regulators, more pins and m
 ![Core Shield]({{ site.baseurl }}/images/UAV/expansionShield.png)
 
 
-##Test
+## Test
 ![Assembled Shield]({{site.baseurl}}/images/UAV/shieldDetail.JPG)
 After assembling, the high speed Serial port (921600bps )between pixhawk and Intel Edison worked like charm, but Edison could not connect to the current sensor and external ADC. I used oscilloscope and found that the waveform was correct, so there should be other problems.  
 SPI port on expansion board was also working, and we used it to connect to an external Arduino to collect data from remote data logger via XBee.
