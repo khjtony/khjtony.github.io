@@ -12,7 +12,7 @@ disqus: diqus-username
 ##Make sure to edit the above fields, especially for disqus.
 
 
-highlighter: pygments
+highlighter: rouge
 # markdown: redcarpet
 markdown: kramdown
 redcarpet:
