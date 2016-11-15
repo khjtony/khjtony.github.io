@@ -17,19 +17,19 @@ title: All Posts
 
   <div class="project-container">
     <h1>Posts</h1>
-    <p>Tech posts, project update and little stories</p>
+    <p>Tech posts, project update and cute stories</p>
     <br><center>
  <!--    <a href="#"><span class="label label-danger">Tech posts</span></a>
     <a href="#"><span class="label label-danger light">Project updates</span></a></center> -->
   </div>
 
-  <div class="container">
+  <!-- <div class="container"> -->
   	<div id="article">
   	<ul class="posts">
    	 {% for post in site.posts %}
-   	 <li><span><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><time class="pull-right post-list">{{ post.date | date_to_string | date: "%b 	%-d, %Y"  }}</h4></time></span></span></li>
+   	 <li><span><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><time class="pull-right post-list">{{ post.date | date_to_string | date: "%b 	%-d, %Y"  }}</h5></time></span></span></li>
    	 {% endfor %}
     </ul>
-  </div>
+  <!-- </div> -->
 
   
