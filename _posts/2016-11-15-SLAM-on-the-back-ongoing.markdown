@@ -54,7 +54,9 @@ Here is the problem. Turtlebot SLAM simulation have not been updated since ROS i
 
 **Ubuntu14.04+ROS indigo+Gazebo4+Turtlebot SLAM demo**
 
+![SLAM]({{site.baseurl}}/images/UAV/slam_on_back/slam.png)
 
+There is no trival. Every step follows the tutorial.
 
 
 ## Milestone 2: Lidar SLAM on the back
