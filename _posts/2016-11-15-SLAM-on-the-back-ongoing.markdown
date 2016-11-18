@@ -83,6 +83,7 @@ After having rviz executed, I added map to the monitor list
 Nothing appeared, but I am already satisfied by no error poped up. No information feeded in , no mapping generated out. So let me read ROS Gmapping documents to see what it requires.
 [gmapping document page](http://wiki.ros.org/gmapping)
 I found that it only subscribe two topics:  
+
 ```
 Subscribed Topics
 
@@ -162,7 +163,8 @@ By some googling, I can use [robot_localization](http://docs.ros.org/kinetic/api
 It seems like this package is not straight forward, but I will look into it. Nevertheless, I can write my own estimator. 
 
 ### Prepare location estimator
-[ROSCON 2015](https://vimeo.com/142624091)
+[ROSCON 2015](https://vimeo.com/142624091)  
+[Robot_localization introduction ppt](http://roscon.ros.org/2015/presentations/robot_localization.pdf)
 
 This is quick start video about robot_localization on ROSCON conference. It provides important feature and configuration samples.
 Though I am still not sure about different frames (base_link, odom, map), I can feed necessary data into base_link frame to see if this node can give me estimated location/position.
@@ -172,7 +174,48 @@ REP referes to Ros Enhancement Proposal, it contains group of suggestions and ce
 [REP 103](http://www.ros.org/reps/rep-0103.html) proposes **Standard Units of Measure and Coordinate Conventions**  
 [REP 105](http://www.ros.org/reps/rep-0105.html) proposes **Coordinate Frames for Mobile Platforms**  
 
+#### Hardware I have
+Here is what I have: RPLidar V2 and BNO 055 with arduino UNO that I always carry with me.  
+![hardware]({{site.baseurl}}/images/UAV/slam_on_back/hardware.png)
 
+#### Install robot_localization   
+```
+cd ~/catkin/src
+git clone https://github.com/cra-ros-pkg/robot_localization
+cd .. 
+catkin_make
+source devel/setup.bash 
+```
+#### Install rosserial
+rosserial is not necessary, but in order to save time (its already 21:45 and I plan to get this project done by the end of today), I turn to use rosserial package to directly publish the tf topic to the laptop.
+
+This package has two part: Arduino side "client" part and computer side interpreter.
+
+1. download git repo from https://github.com/ros-drivers/rosserial.git to catkin_ws/src
+2. catkin_make
+3. Following the [rosserial_arduino](http://wiki.ros.org/rosserial_arduino/Tutorials/Arduino%20IDE%20Setup) to generate arduion library. 
+4. Then I can see the "ros_lib" from my Arduino IDE.
+5. Load sample program odom to the arduino, then start server side by  
+```
+rosrun rosserial_server serial_node 
+```
+However, system constanly gives me this error:  
+```
+[ INFO] [1479449266.767625912]: rosserial_server session configured for /dev/ttyACM0 at 57600bps.
+[ INFO] [1479449266.768006176]: Opened /dev/ttyACM0
+[ WARN] [1479449266.768145627]: Socket asio error, closing socket: asio.misc:2
+```
+
+Oh...It's my bad. According to the [beginning tutorial](http://wiki.ros.org/rosserial_arduino/Tutorials/Hello%20World), I should use the following command:  
+``` 
+rosrun rosserial_python serial_node.py /dev/ttyACM0
+``` 
+Now I can see an object flying around center point in rviz: 
+![hardware]({{site.baseurl}}/images/UAV/slam_on_back/tf_example.png)
+
+#### Publishing BNO055 data
+
+#### Frame 
 
 ## Next step: SLAM on the vehicle
 
