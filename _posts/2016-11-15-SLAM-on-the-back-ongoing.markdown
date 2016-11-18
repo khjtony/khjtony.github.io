@@ -43,12 +43,13 @@ I found that interative developing or "agile developing" is useful, though it ma
 ## Milestone 1: Lidar SLAM on turtlebot simulator
 Turtlebot simulator is already there, with the least risk bringing the most progress. 
 After some research and study, here is what we need, or the road map:  
-1. [Turtlebot for ROS](http://wiki.ros.org/turtlebot_navigation/
-Tutorials/Build%20a%20map%20with%20SLAM) 
-2. [gmapping package for ROS](http://wiki.ros.org/gmapping) 
-3. [ROS indigo](http://wiki.ros.org/indigo) 
-4. [Ubuntu 14.04](http://releases.ubuntu.com/14.04/) 
-5. Gazebo 4 
+
+1. [Turtlebot for ROS](http://wiki.ros.org/turtlebot_navigation/  
+Tutorials/Build%20a%20map%20with%20SLAM)   
+2. [gmapping package for ROS](http://wiki.ros.org/gmapping)   
+3. [ROS indigo](http://wiki.ros.org/indigo)   
+4. [Ubuntu 14.04](http://releases.ubuntu.com/14.04/)   
+5. Gazebo 4   
 
 Pause.
 Here is the problem. Turtlebot SLAM simulation have not been updated since ROS indigo, and ROS indigo is not compatible with Ubuntu 16.04. So our setup will be:
@@ -148,6 +149,11 @@ The Lidar I used, RPLidar V2, provides nice API/SDK, so I can just us its API to
 
 ![SLAM]({{site.baseurl}}/images/UAV/slam_on_back/rp2_rviz.png)
 
+**NOTICE** if rplidar sdk/api reminds "cannot bind usb port" error, that is because your current user does not have permission to use ttyUSBx port. Usually you can use sudo, but since ROS is installed for user, you can execute the following command to add user to dialout usergroup:  
+```
+sudo adduser $USER dialout
+```  
+
 The problem is tf topic. In case that we will mount Lidar on the back (or in hand), how do we know my current position? I do have several 9-axis sensors, so I need to estimate my position by using some technology.
 
 *BTW, I strongly recommand BNO055, 9-axis motion sensor from Bosch, which has a cortex-M0 inside, and just output filtered and converted data ready to use.*
@@ -163,7 +169,8 @@ Though I am still not sure about different frames (base_link, odom, map), I can 
 
 #### REP 103 & REP 105
 REP referes to Ros Enhancement Proposal, it contains group of suggestions and cenventions that making different developers have "the same tone".  
-[REP 103](http://www.ros.org/reps/rep-0103.html) defines **Standard Units of Measure and Coordinate Conventions** 
+[REP 103](http://www.ros.org/reps/rep-0103.html) proposes **Standard Units of Measure and Coordinate Conventions**  
+[REP 105](http://www.ros.org/reps/rep-0105.html) proposes **Coordinate Frames for Mobile Platforms**  
 
 
 
