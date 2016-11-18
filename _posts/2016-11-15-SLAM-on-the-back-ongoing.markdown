@@ -89,11 +89,11 @@ tf (tf/tfMessage)
 	Transforms necessary to relate frames for laser, base, and odometry (see below) 
 scan (sensor_msgs/LaserScan) 
 	Laser scans to create the map from 
-```
+``` 
 
 Then check topic definition of tf and scan:
 #### topic: [tf](https://mirror.umd.edu/roswiki/doc/diamondback/api/geometry_msgs/html/msg/TransformStamped.html)
-```
+``` 
 Header header
     uint32 seq
     time stamp
@@ -145,6 +145,7 @@ float32[] intensities    # intensity data [device-specific units].  If your
 ```
 
 The Lidar I used, RPLidar V2, provides nice API/SDK, so I can just us its API to publish scan information. Actually, API/SDK provides a demo software:
+
 ![SLAM]({{site.baseurl}}/images/UAV/slam_on_back/rp2_rviz.png)
 
 The problem is tf topic. In case that we will mount Lidar on the back (or in hand), how do we know my current position? I do have several 9-axis sensors, so I need to estimate my position by using some technology.
