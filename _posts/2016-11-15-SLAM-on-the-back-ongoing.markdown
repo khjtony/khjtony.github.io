@@ -44,11 +44,11 @@ I found that interative developing or "agile developing" is useful, though it ma
 Turtlebot simulator is already there, with the least risk bringing the most progress. 
 After some research and study, here is what we need, or the road map:
 1. [Turtlebot for ROS](http://wiki.ros.org/turtlebot_navigation/
-Tutorials/Build%20a%20map%20with%20SLAM)
-2. [gmapping package for ROS](http://wiki.ros.org/gmapping)
-3. [ROS indigo](http://wiki.ros.org/indigo)
-4. [Ubuntu 14.04](http://releases.ubuntu.com/14.04/)
-5. Gazebo 4
+Tutorials/Build%20a%20map%20with%20SLAM) 
+2. [gmapping package for ROS](http://wiki.ros.org/gmapping) 
+3. [ROS indigo](http://wiki.ros.org/indigo) 
+4. [Ubuntu 14.04](http://releases.ubuntu.com/14.04/) 
+5. Gazebo 4 
 
 Pause.
 Here is the problem. Turtlebot SLAM simulation have not been updated since ROS indigo, and ROS indigo is not compatible with Ubuntu 16.04. So our setup will be:
@@ -68,11 +68,13 @@ Adding the least amount of hardware, Lidar and IMU, to the system can minimize t
 I will create such demo based on ROS gmapping package, and according to the [gmapping tutorial page](http://wiki.ros.org/slam_gmapping/Tutorials/MappingFromLoggedData), we can use the following command to start gmapping_slam script.
 ```
 rosrun gmapping slam_gmapping scan:=base_scan
-```
+``` 
+
 Then I execute rviz to visualize the data:
 ```
 rosrun rviz rviz
-```
+``` 
+
 After having rviz executed, I added map to the monitor list
 ![SLAM]({{site.baseurl}}/images/UAV/slam_on_back/rviz_blank.png)
 
