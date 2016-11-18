@@ -93,7 +93,7 @@ scan (sensor_msgs/LaserScan)
 	Laser scans to create the map from 
 ``` 
 
-Then check topic definition of tf and scan:
+Then check topic definition of tf and scan:  
 #### topic: [tf](https://mirror.umd.edu/roswiki/doc/diamondback/api/geometry_msgs/html/msg/TransformStamped.html)  
 ``` 
 Header header
@@ -201,9 +201,9 @@ rosrun rosserial_server serial_node
 ```
 However, system constanly gives me this error:  
 ```
-[ INFO] [1479449266.767625912]: rosserial_server session configured for /dev/ttyACM0 at 57600bps.
-[ INFO] [1479449266.768006176]: Opened /dev/ttyACM0
-[ WARN] [1479449266.768145627]: Socket asio error, closing socket: asio.misc:2
+[ INFO] [1479449266.767625912]: rosserial_server session configured for /dev/ttyACM0 at 57600bps.  
+[ INFO] [1479449266.768006176]: Opened /dev/ttyACM0  
+[ WARN] [1479449266.768145627]: Socket asio error, closing socket: asio.misc:2  
 ```
 
 Oh...It's my bad. According to the [beginning tutorial](http://wiki.ros.org/rosserial_arduino/Tutorials/Hello%20World), I should use the following command:  
