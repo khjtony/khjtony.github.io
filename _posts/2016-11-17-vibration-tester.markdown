@@ -1,6 +1,6 @@
 ---
-title: SLAM on the back (ongoing)
-date: 2016-11-15 18:35:43
+title: Vibration Tester (ongoing)
+date: 2016-11-17 16:40:43
 categories: Project
 project: UAV
 ---
@@ -42,7 +42,8 @@ I found that interative developing or "agile developing" is useful, though it ma
 
 ## Milestone 1: Lidar SLAM on turtlebot simulator
 Turtlebot simulator is already there, with the least risk bringing the most progress. 
-After some research and study, here is what we need, or the road map:  
+After some research and study, here is what we need, or the road map:
+
 1. [Turtlebot for ROS](http://wiki.ros.org/turtlebot_navigation/
 Tutorials/Build%20a%20map%20with%20SLAM) 
 2. [gmapping package for ROS](http://wiki.ros.org/gmapping) 
@@ -65,12 +66,12 @@ Adding the least amount of hardware, Lidar and IMU, to the system can minimize t
 
 
 
-I will create such demo based on ROS gmapping package, and according to the [gmapping tutorial page](http://wiki.ros.org/slam_gmapping/Tutorials/MappingFromLoggedData), we can use the following command to start gmapping_slam script.  
+I will create such demo based on ROS gmapping package, and according to the [gmapping tutorial page](http://wiki.ros.org/slam_gmapping/Tutorials/MappingFromLoggedData), we can use the following command to start gmapping_slam script.
 ```
 rosrun gmapping slam_gmapping scan:=base_scan
 ``` 
 
-Then I execute rviz to visualize the data:  
+Then I execute rviz to visualize the data:
 ```
 rosrun rviz rviz
 ``` 
@@ -81,7 +82,7 @@ After having rviz executed, I added map to the monitor list
 ### Topics that we need for gmapping_slam
 Nothing appeared, but I am already satisfied by no error poped up. No information feeded in , no mapping generated out. So let me read ROS Gmapping documents to see what it requires.
 [gmapping document page](http://wiki.ros.org/gmapping)
-I found that it only subscribe two topics:  
+I found that it only subscribe two topics:
 ```
 Subscribed Topics
 
@@ -92,7 +93,7 @@ scan (sensor_msgs/LaserScan)
 ``` 
 
 Then check topic definition of tf and scan:
-#### topic: [tf](https://mirror.umd.edu/roswiki/doc/diamondback/api/geometry_msgs/html/msg/TransformStamped.html)  
+#### topic: [tf](https://mirror.umd.edu/roswiki/doc/diamondback/api/geometry_msgs/html/msg/TransformStamped.html)
 ``` 
 Header header
     uint32 seq
@@ -156,15 +157,6 @@ By some googling, I can use [robot_localization](http://docs.ros.org/kinetic/api
 It seems like this package is not straight forward, but I will look into it. Nevertheless, I can write my own estimator. 
 
 ### Prepare location estimator
-[ROSCON 2015](https://vimeo.com/142624091)
-
-This is quick start video about robot_localization on ROSCON conference. It provides important feature and configuration samples.
-Though I am still not sure about different frames (base_link, odom, map), I can feed necessary data into base_link frame to see if this node can give me estimated location/position.
-
-#### REP 103 & REP 105
-REP referes to Ros Enhancement Proposal, it contains group of suggestions and cenventions that making different developers have "the same tone".  
-[REP 103](http://www.ros.org/reps/rep-0103.html) defines **Standard Units of Measure and Coordinate Conventions** 
-
 
 
 ## Next step: SLAM on the vehicle
