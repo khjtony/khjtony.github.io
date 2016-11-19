@@ -198,20 +198,31 @@ This package has two part: Arduino side "client" part and computer side interpre
 5. Load sample program odom to the arduino, then start server side by  
 ```
 rosrun rosserial_server serial_node 
-```
+```  
 However, system constanly gives me this error:  
 ```
 [ INFO] [1479449266.767625912]: rosserial_server session configured for /dev/ttyACM0 at 57600bps.  
 [ INFO] [1479449266.768006176]: Opened /dev/ttyACM0  
 [ WARN] [1479449266.768145627]: Socket asio error, closing socket: asio.misc:2  
-```
+```  
 
-Oh...It's my bad. According to the [beginning tutorial](http://wiki.ros.org/rosserial_arduino/Tutorials/Hello%20World), I should use the following command:  
+Oh...It's my bad. According to the [beginning tutorial](http://wiki.ros.org/rosserial_arduino/Tutorials/Hello%20World), I should use the following command:    
 ``` 
 rosrun rosserial_python serial_node.py /dev/ttyACM0
-``` 
+```   
 Now I can see an object flying around center point in rviz: 
 ![hardware]({{site.baseurl}}/images/UAV/slam_on_back/tf_example.png)
+
+---
+*Last update: Nov.18 2016, well, I did not finish it on time.*  
+
+#### Odometry data for gmapping
+ros_gmapping package require odometry data. In my setup, I dont have encoder or GPA (In door), so here are two solutions:  
+1. Using [hector_mapping](http://wiki.ros.org/hector_mapping) instead of gmapping  
+2. [Check](http://answers.ros.org/question/220068/using-robot-localisation-without-odometry-values/) if ros_localization package is able to give odometry data.  
+3. Using some imtermediate package to mocking odometry by IMU and laser.  
+
+
 
 #### Publishing BNO055 data
 
@@ -220,6 +231,6 @@ Now I can see an object flying around center point in rviz:
 ## Next step: SLAM on the vehicle
 
 ---
-*Last update: Nov.17 2016*
-
+*Last update: Nov.18 2016*  
+*Last update: Nov.17 2016*  
 *Last update: Nov.16 2016*
