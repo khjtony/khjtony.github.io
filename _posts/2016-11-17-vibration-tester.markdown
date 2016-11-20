@@ -1,5 +1,5 @@
 ---
-title: Vibration Tester (ongoing)
+title: Vibration Tester(ongoing)
 date: 2016-11-17 16:40:43
 categories: Project
 project: UAV
@@ -17,7 +17,9 @@ project: UAV
 ## Introduction
 In our research group short term plan, we plan to mount some sensors including SAR Radar on the UAV for some special missions, so we need a fairly stable UAV platform. We can simple buy vibration absorbers and assemble a lightweight stable frame, but we dont know the vibration characteristics on frequency domain, and especially for Radar application, it is crucial to measure the vibration amplitude, frequency, power, even phase for signal compensation.  
 In case that out lab has limited budget and those commercial grade vibration meters are very expensive, I decided to build myself.  
+
 ### Criteria  
+
 1. High bandwidth (As high as possible, because motors on the drone are working at high rpm)  
 2. Lightweight. Heavy measure unit will change the platform characteristic.  
 3. Easy digital interface. This tester may be left on the drone as permeate sensor, so it should have good digital interface for companion computer.
@@ -58,10 +60,13 @@ There is always trade off when picking up IC/sensor. In this design, the trade o
 ADXL001 analog accelerometer has incredible high bandwidth to 22KHz, but the downside is that it has relatively low precision and it only have one x-axis. Also, this analog accelerometer has very high g-range(lowest to 250g), which means is has low resolution, comparing to the ADXL350. In order to simplify the first version design and confirming the feasibility, I picked ADXL350.  
 
 ## Design (Will be updated shortly)
+
 ### Top design  
-![Vibration tester version 1 schematic]({{ site.baseurl }}/images/UAV/vibration_tester/vibration_sch.png)  
+![Vibration tester version 1 schematic]({{ site.baseurl }}/images/UAV/vibration_tester/vibration_sch.png) 
+
 ### PSoC 4200M Design  
-![PSoC 4200M schematic]({{ site.baseurl }}/images/UAV/vibration_tester/psoc4200m_sch.png)   
+![PSoC 4200M schematic]({{ site.baseurl }}/images/UAV/vibration_tester/psoc4200m_sch.png)  
+
 ### 3v3 LDO Design  
 ![3v3 LDO schematic]({{ site.baseurl }}/images/UAV/vibration_tester/3v3_sch.png)   
 
