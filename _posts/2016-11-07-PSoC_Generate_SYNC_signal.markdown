@@ -15,11 +15,11 @@ project: Others
 
 
 ## Background
-In my SAR Radar backend design, I need my PSoC 5LP to sample TX and RX simultaneously. Radar also provides an "enable" signal indicating that radar starts a new sampling cycle. Our radar is FMCW radar, so making sure that TX/RX samplings are in phase is very important. Here is my top design in the PSoC Creator:
+In my SAR Radar back-end design, I need my PSoC 5LP to sample TX and RX simultaneously. Radar also provides an "enable" signal indicating that radar starts a new sampling cycle. Our radar is FMCW radar, so making sure that TX/RX samplings are in phase is very important. Here is my top design in the PSoC Creator:
 
 ![PSoC top design]({{site.baseurl}}/images/others/psoc_clock_sync/psoc_requirement.png)
 
-ADCs are diven by internal clocks at ~1MHz.
+ADCs are driven by internal clocks at ~1MHz.
 ADC sampling is driven by ADC_Clock signal at ~44.1KHz, so ADCs' samplings will be in phase.
 But how about sampling delay between each radar sampling cycle?
 
