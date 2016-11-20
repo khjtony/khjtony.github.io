@@ -13,25 +13,25 @@ project: UAV
 >* Background
 >* Brief of SLAM
 >* Plan
->* Milestone 1: Lidar SLAM on Tuttlebot simulator
+>* Milestone 1: Lidar SLAM on Turtlebot simulator
 >* Milestone 2: Lidar SLAM on the back
 
 
 ## Background
 I am still in the UAV project, and we are in the new stage: Implementing Autopilot.
-After final stage of Intel-Cornell cup, I kept thinking about future of UAV. UAV is useful, having lot of potential, true. But UAV *at this moment* UAV is somehow not useful, also true. Concretly, UAV is not clever enough to do many missions.
+After final stage of Intel-Cornell cup, I kept thinking about future of UAV. UAV is useful, having lot of potential, true. But UAV *at this moment* UAV is somehow not useful, also true. Concretely, UAV is not clever enough to do many missions.
 Autopilot is not defined by "Auto" "pilot", but more broaden idea -- consciousness. Collision avoidance, target following, even much more complex tasks, can be done after the UAV having consciousness of what happened.
-The prolog of this consciousness is SLAM.
+The prologue of this consciousness is SLAM.
 
 ## Brief of SLAM
 SLAM refers to "Simultaneous localization and mapping", early started many years ago, and recently been boosted by rapidly improved computer power.
 
-The basic idea of SLAM is collecting geometry information from evnrionment, ploting point cloud in the computer, and estimate current position (relative). It is independent navigation method that requires no external devices like GPS, UWB, Beacons.
+The basic idea of SLAM is collecting geometry information from environment, plotting point cloud in the computer, and estimate current position (relative). It is independent navigation method that requires no external devices like GPS, UWB, Beacons.
 
 Google tango is a famous example:
 <iframe width="480" height="360" src="http://www.youtube.com/embed/Qe10ExwzCqk" frameborder="0" allowfullscreen> </iframe>
 
-Nevertheless the SLAM is intended for navigation, after Neural Network and Machine Learning had become the next hot topic, SLAM will be the best friend of Autopilot/Autodriver, because it provides rich information for envrionment reconstruction. SLAM is eye for the machine brain. 
+Nevertheless the SLAM is intended for navigation, after Neural Network and Machine Learning had become the next hot topic, SLAM will be the best friend of Autopilot/Auto-driver, because it provides rich information for environment reconstruction. SLAM is eye for the machine brain. 
 
 ## Plan
 Lucky, SLAM and Autopilot can be developed individually -- they are not parasites to each other. Let me focus on SLAM side first. 
@@ -42,7 +42,7 @@ For faster developing and easier debugging purpose, I will deploy SLAM on my gro
 Before I finish the hardware design (RC router, control interface, etc), a easier way to implement SLAM in practical is the title -- SLAM on the back.
 Concretely, I will stick an IMU on my Lidar and keep them in right hand, use my another hand carry the laptop, walking inside the building, making sure that everything is understood(Im sure I can).
 
-I found that interative developing or "agile developing" is useful, though it may take more steps and more time, but usually when I am working on hardware design, it is more likely that I stuck at some point, so I will move small step forward one by one. 
+I found that iterative developing or "agile developing" is useful, though it may take more steps and more time, but usually when I am working on hardware design, it is more likely that I stuck at some point, so I will move small step forward one by one. 
 
 ## Milestone 1: Lidar SLAM on turtlebot simulator
 Turtlebot simulator is already there, with the least risk bringing the most progress. 
@@ -62,11 +62,11 @@ Here is the problem. Turtlebot SLAM simulation have not been updated since ROS i
 
 ![SLAM]({{site.baseurl}}/images/UAV/slam_on_back/slam.png)
 
-There is no trival. Every step follows the tutorial.
+There is no trivial. Every step follows the tutorial.
 
 
 ## Milestone 2: Lidar SLAM on the back
-Adding the least amount of hardware, Lidar and IMU, to the system can minimize the uncertainty mucn. At this step I will feed Lidar output and IMU output to the system, looking for ploting and locating myself in the building.
+Adding the least amount of hardware, Lidar and IMU, to the system can minimize the uncertainty. At this step I will feed Lidar output and IMU output to the system, looking for plotting and locating myself in the building.
 
 
 
@@ -84,7 +84,7 @@ After having rviz executed, I added map to the monitor list
 ![SLAM]({{site.baseurl}}/images/UAV/slam_on_back/rviz_blank.png)
 
 ### Topics that we need for gmapping_slam
-Nothing appeared, but I am already satisfied by no error poped up. No information feeded in , no mapping generated out. So let me read ROS Gmapping documents to see what it requires.
+Nothing appeared, but I am already satisfied by no error pupped up. No information feed in , no mapping generated out. So let me read ROS Gmapping documents to see what it requires.
 [gmapping document page](http://wiki.ros.org/gmapping)
 I found that it only subscribe two topics:  
 
@@ -92,7 +92,7 @@ I found that it only subscribe two topics:
 Subscribed Topics
 
 tf (tf/tfMessage) 
-	Transforms necessary to relate frames for laser, base, and odometry (see below) 
+	Transforms necessary to relate frames for laser, base, and odometer (see below) 
 scan (sensor_msgs/LaserScan) 
 	Laser scans to create the map from 
 ``` 
@@ -224,14 +224,14 @@ Now I can see an object flying around center point in rviz:
 ros_gmapping package require odometry data. In my setup, I dont have encoder or GPA (In door), so here are two solutions:  
 1. Using [hector_mapping](http://wiki.ros.org/hector_mapping) instead of gmapping  
 2. [Check](http://answers.ros.org/question/220068/using-robot-localisation-without-odometry-values/) if ros_localization package is able to give odometry data.  
-3. Using some imtermediate package to mocking odometry by IMU and laser.  
+3. Using some intermediate package to mocking odometer by IMU and laser.  
 
 #### Frame 
 Before I go further, I found a critical idea that I am not quite familiar with **Frame**  
 Concretely, TF defines relative geometry relationships between each object in the robot system. For example, let me cite this photo:  
 ![hardware]({{site.baseurl}}/images/UAV/slam_on_back/tf_tree.png)  
 
-By the way, I strongly recommand to go through the whole tf tutorial. It is essential.
+By the way, I strongly recommend to go through the whole tf tutorial. It is essential.
 
 ---
 *Last update: Nov.19 2016
@@ -256,18 +256,18 @@ In catkin/src, create my slam_on_back package by typing:
 catkin_create_pkg slam_on_back roscpp rospy hector_mapping rplidar tf robot_localization  
 ```  
 
-I always have the followng error:  
+I always have the following error:  
 ```  
 No transform between frames /map and /base_link available after xxxx seconds
 ```  
 Lucky, I found this blog (in Chinese),  
 [SLAM with RPLidar](https://hollyqood.wordpress.com/2015/12/01/ros-slam-2-hector-slam-2d%E5%9C%B0%E5%9C%96%E5%BB%BA%E7%BD%AE/)  
 which reminds me that rplidar_ros.git has slam branch.  
-It seems like this branch has been deprecated, but configration file/launch file can be used.
+It seems like this branch has been deprecated, but configuration file/launch file can be used.
 
 ![Rplidar_SLAM_Kemper]({{site.baseurl}}/images/UAV/slam_on_back/map_kemper.png)  
 Finally I got this work.
-Things is simpler than I thought. Theoratically I need to put design/setup with gmapping, because hector map does not depends on odometer and RPLidar v2 has bad update rate (~10Hz) and short sensing range (~6m), but I want to save time and directly move to the next step. Source code can be checked in the github
+Things is simpler than I thought. Theoretically I need to put design/setup with gmapping, because hector map does not depends on odometer and RPLidar v2 has bad update rate (~10Hz) and short sensing range (~6m), but I want to save time and directly move to the next step. Source code can be checked in the github
 
 
 
@@ -277,7 +277,7 @@ I have two vehicle platforms as following:
 
 ![Green slime]({{site.baseurl}}/images/UAV/slam_on_back/green_slime.png)  
 
-So the nect step will be mounting this SLAM setup on the vehicle, with odometry data avilable (Via IMU or other sensors)  
+So the next step will be mounting this SLAM setup on the vehicle, with odometer data available (Via IMU or other sensors)  
 ## Project setup and source code
 ![Demo setup]({{site.baseurl}}/images/UAV/slam_on_back/demo_setup.png)  
 
