@@ -1,5 +1,5 @@
 ---
-title: SLAM on the back (ongoing)
+title: SLAM on the back
 date: 2016-11-15 18:35:43
 categories: Project
 project: UAV
@@ -11,6 +11,10 @@ project: UAV
 
 ## Post overview
 >* Background
+>* Brief of SLAM
+>* Plan
+>* Milestone 1: Lidar SLAM on Tuttlebot simulator
+>* Milestone 2: Lidar SLAM on the back
 
 
 ## Background
@@ -33,7 +37,7 @@ Nevertheless the SLAM is intended for navigation, after Neural Network and Machi
 Lucky, SLAM and Autopilot can be developed individually -- they are not parasites to each other. Let me focus on SLAM side first. 
 For faster developing and easier debugging purpose, I will deploy SLAM on my ground vehicle first.
 
-![Ground vehicle]({{site.baseurl}}/images/UAV/slam_on_back/vehicle.png)
+![Ground vehicle]({{site.baseurl}}/images/UAV/slam_on_back/big_foot.png)
 
 Before I finish the hardware design (RC router, control interface, etc), a easier way to implement SLAM in practical is the title -- SLAM on the back.
 Concretely, I will stick an IMU on my Lidar and keep them in right hand, use my another hand carry the laptop, walking inside the building, making sure that everything is understood(Im sure I can).
@@ -222,15 +226,86 @@ ros_gmapping package require odometry data. In my setup, I dont have encoder or 
 2. [Check](http://answers.ros.org/question/220068/using-robot-localisation-without-odometry-values/) if ros_localization package is able to give odometry data.  
 3. Using some imtermediate package to mocking odometry by IMU and laser.  
 
-
-
-#### Publishing BNO055 data
-
 #### Frame 
+Before I go further, I found a critical idea that I am not quite familiar with **Frame**  
+Concretely, TF defines relative geometry relationships between each object in the robot system. For example, let me cite this photo:  
+![hardware]({{site.baseurl}}/images/UAV/slam_on_back/tf_tree.png)  
 
-## Next step: SLAM on the vehicle
+By the way, I strongly recommand to go through the whole tf tutorial. It is essential.
 
 ---
+*Last update: Nov.19 2016
+
+#### Install hector_map  
+After some research, I will go through the hector_map+Laser solution.  
+Install hector from [hector_slam](https://github.com/tu-darmstadt-ros-pkg/hector_slam) is easy, but it requires Qt4.x, and Qt5.x is not compatible with current version of hector_slam.  
+Ubuntu users can do the following:  
+```
+sudo apt-get install qt4-default
+sudo apt-get install qt4-dev-tools
+```  
+Then go to the catkin folder to  
+```  
+catkin_make
+```
+
+
+#### Create our slam_on_back package  
+In catkin/src, create my slam_on_back package by typing:  
+```
+catkin_create_pkg slam_on_back roscpp rospy hector_mapping rplidar tf robot_localization  
+```  
+
+I always have the followng error:  
+```  
+No transform between frames /map and /base_link available after xxxx seconds
+```  
+Lucky, I found this blog (in Chinese),  
+[SLAM with RPLidar](https://hollyqood.wordpress.com/2015/12/01/ros-slam-2-hector-slam-2d%E5%9C%B0%E5%9C%96%E5%BB%BA%E7%BD%AE/)  
+which reminds me that rplidar_ros.git has slam branch.  
+It seems like this branch has been deprecated, but configration file/launch file can be used.
+
+![Rplidar_SLAM_Kemper]({{site.baseurl}}/images/UAV/slam_on_back/map_kemper.png)  
+Finally I got this work.
+Things is simpler than I thought. Theoratically I need to put design/setup with gmapping, because hector map does not depends on odometer and RPLidar v2 has bad update rate (~10Hz) and short sensing range (~6m), but I want to save time and directly move to the next step. Source code can be checked in the github
+
+
+
+## Next step: SLAM on the vehicle
+I have two vehicle platforms as following:  
+![Big foot]({{site.baseurl}}/images/UAV/slam_on_back/big_foot.png)  
+
+![Green slime]({{site.baseurl}}/images/UAV/slam_on_back/green_slime.png)  
+
+So the nect step will be mounting this SLAM setup on the vehicle, with odometry data avilable (Via IMU or other sensors)  
+## Project setup and source code
+![Demo setup]({{site.baseurl}}/images/UAV/slam_on_back/demo_setup.png)  
+
+github: [slam_on_back](https://github.com/khjtony/slam_on_back.git)
+
+### Package directory:  
+```
+./
+├── CMakeLists.txt
+├── include
+│   └── slam_on_back
+├── launch
+│   ├── hector_test.launch
+│   ├── rplidar.launch
+│   ├── rplidar_mapping.launch
+│   ├── rplidar_mapping.launch.old
+│   ├── test_rplidar.launch
+│   └── view_rplidar.launch
+├── package.xml
+├── README.md
+├── rviz
+│   └── rplidar.rviz
+└── src
+```  
+I will explain each file when I have time.   
+
+---
+*Last update: Nov.19 2016*
 *Last update: Nov.18 2016*  
 *Last update: Nov.17 2016*  
 *Last update: Nov.16 2016*

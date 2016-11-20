@@ -1,5 +1,5 @@
 ---
-title: Vibration Tester Ver 1
+title: Vibration Tester (ongoing)
 date: 2016-11-17 16:40:43
 categories: Project
 project: UAV
