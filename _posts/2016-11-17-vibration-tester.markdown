@@ -62,18 +62,31 @@ ADXL001 analog accelerometer has incredible high bandwidth to 22KHz, but the dow
 ## Design (Will be updated shortly)
 
 ### Top design  
+This design is as simple as having three parts:  
+1. Power unit  
+2. PSoC4200M series micro controller  
+3. ADXL350 3-axis  sensor  
+
 ![Vibration tester version 1 schematic]({{ site.baseurl }}/images/UAV/vibration_tester/vibration_sch.png) 
 
 ### PSoC 4200M Design  
+I used CY8C4247AZI-M485, because it is the only MCU equipped with CAN module in the PSoC 4200M series. Other than PSoC5LP, PSoC4200M does not have multiple GPIO rails, so all the gpios on the PSoC4200M are working in the same voltage level. The benefit is obvious: less decoupling capacitors. 
+This design schematic was copied and pasted from my standard design library, so those add-on design, including bypass capacitors, tan capacitors and external crystals are all left blank.  
+One noticeable trick is adding a level shifter on the UART connector, then this board is ready to communicate with both 3.3V and 5V FTDI cable without problem.
+
+Of course I admit that using a PSoC4200M is pretty overkill, but I have to say, since I am in developing and process, it is far more important to standardize the design process and speed up the developing progress. Smaller and cheaper is always good, but I concern more about the time cost.   
+
 ![PSoC 4200M schematic]({{ site.baseurl }}/images/UAV/vibration_tester/psoc4200m_sch.png)  
 
 ### 3v3 LDO Design  
 ![3v3 LDO schematic]({{ site.baseurl }}/images/UAV/vibration_tester/3v3_sch.png)   
 
-## Layout
+## Layout  
+According to the [ADXL350-datasheet](http://www.analog.com/media/en/technical-documentation/data-sheets/ADXL350.pdf), ADXL350 chip should be put at the center of PCB with four mount screws on each corner in order to minimize the self-vibration.  
 ![Vibration tester version 2 schematic]({{ site.baseurl }}/images/UAV/vibration_tester/vibration_pcb.png)  
 
 
 ---
+*Last update: Nov.22 2016*  
 *Last update: Nov.20 2016*  
 *Last update: Nov.19 2016*
