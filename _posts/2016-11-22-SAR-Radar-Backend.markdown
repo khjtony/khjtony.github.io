@@ -23,6 +23,7 @@ Our another goal is mounting millimeter-radar on the drone to conduct SAR imagin
 We have a radar module called K-MC1 from RFBeam Microwave GmbH, and since it is just a transmitter with antenna, we need to build back end and signal processing stage making it usable. In this blog, I am going to record my **SAR Radar Back-end PCB MK1** design.  
 
 ## System outline  
+
 ### K-MC1 module  
 K-MC1 is radar transceiver working on 24GHz with 180MHz tuning bandwidth.  
 ![demo_banner]({{ site.baseurl }}/images/UAV/sar_radar_backend/k_mc1_intro.png)  
@@ -34,10 +35,12 @@ In order to use K-MC1 radar module, we need to provide VCO input, Radar enable s
 The whole radar system design is collaborative work, and another student is using Teensy 3.1 to provide triangular wave as VCO input, so this back-end PCB top design is like this:  
 ![System outline]({{ site.baseurl }}/images/UAV/sar_radar_backend/system_outline.png)  
 
-## Flowchart  
+## Flowchart   
+
 ## Top design  
 ![Top Design]({{ site.baseurl }}/images/UAV/sar_radar_backend/top_design.png)  
 This design has the following features:  
+
 1. Wide range power input (12~40V)
 1. SD card data corruption safe battery
 1. Dual-channel up to 1MSPS(per channel) ADC
