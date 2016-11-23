@@ -1,6 +1,7 @@
 ---
 title: Agriculture UAV demo
 date: 2016-04-15 15:12:00
+last_update: 20160415
 categories: Project
 project: UAV
 ---

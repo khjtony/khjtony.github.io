@@ -26,7 +26,8 @@ title: All Posts
   <!-- <div class="container"> -->
   	<div id="article">
   	<ul class="posts">
-   	 {% for post in site.posts %}
+    {% assign all_posts = site.posts | sort: 'last_update' %}
+   	 {% for post in all_posts reversed%}
    	 <li><span><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><time class="pull-right post-list">{{ post.date | date_to_string | date: "%b 	%-d, %Y"  }}</h5></time></span></span></li>
    	 {% endfor %}
     </ul>

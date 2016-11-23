@@ -1,6 +1,7 @@
 ---
 title: How to generate Synchronized clock in PSoC
 date: 2016-11-07 22:12:11
+last_update: 20161107
 categories: Project
 project: Others
 ---

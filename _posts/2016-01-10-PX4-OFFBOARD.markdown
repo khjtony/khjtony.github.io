@@ -1,6 +1,7 @@
 ---
 title: PX4 OFFBOARD Flight test
 date: 2016-01-10 15:22
+last_update: 20160110
 categories: Project
 project: UAV
 ---

@@ -1,6 +1,7 @@
 ---
 title: Intel Edison Shield Ver1.0
 date: 2016-02-15 9:01:10
+last_update: 20160215
 categories: Project
 project: UAV
 ---

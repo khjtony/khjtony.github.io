@@ -1,8 +1,10 @@
 ---
-title: Vibration Tester(ongoing)
+title: Vibration Tester
 date: 2016-11-17 16:40:43
+last_update: 20161122
 categories: Project
 project: UAV
+
 ---
 
 ![demo_banner]({{ site.baseurl }}/images/UAV/vibration_tester/vibration_banner.png)

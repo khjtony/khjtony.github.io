@@ -1,6 +1,7 @@
 ---
 title: SLAM on the back
 date: 2016-11-15 18:35:43
+last_update: 20161119
 categories: Project
 project: UAV
 ---

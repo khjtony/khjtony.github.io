@@ -1,6 +1,7 @@
 ---
 title: Heron Rack installation
 date: 2016-01-04 18:30:49
+last_update: 20160104
 categories: Project
 project: IAC_Heron
 ---

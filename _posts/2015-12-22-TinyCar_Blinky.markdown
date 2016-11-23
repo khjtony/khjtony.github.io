@@ -1,6 +1,7 @@
 ---
 title: Blinky on STM32F4 with FreeRTOS, STMCube and HAL
 date: 2015-12-22 20:30:49
+last_update: 20151222
 categories: Project
 project: TinyCar
 ---

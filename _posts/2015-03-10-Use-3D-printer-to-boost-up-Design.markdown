@@ -1,6 +1,7 @@
 ---
 title: Use 3D printer to boost up Design
 date: 2015-03-10 12:11:16
+last_update: 20150310
 categories: Project
 project: NaughtyBall
 ---
