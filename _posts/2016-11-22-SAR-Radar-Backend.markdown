@@ -1,14 +1,14 @@
 ---
-title: SAR Radar Back-end PCB MK 1 (ongoing)
+title: SAR Radar Back-end PCB MK 1
 date: 2016-11-22 14:28:10
 last_update: 20161123
 categories: Project
 project: UAV
 ---
-#### This blog has not been fully finished, and I will update it by time.  
+
 ![demo_banner]({{ site.baseurl }}/images/UAV/sar_radar_backend/filter_banner.png)
   
-
+>* Deprecated
 >* Background
 >* System outline
 >* Flowchart
@@ -17,6 +17,9 @@ project: UAV
 >* MCU design
 >* MISC design
 >* Design Redundant/Backup strategy
+
+## Deprecated
+After several meetings with professor, we found that this Radar back-end design is not clear and we need a new design, so I will move on to the [SAR Radar Back-end MK2 design]({{ site.baseurl }}/project/2016/12/04/SAR-Radar-Backend-MK2.html). MK1 is deprecated.
 
 ## Background
 Our another goal is mounting millimeter-radar on the drone to conduct SAR imaging. Also, radar is better than either Lidar or stereo camera in bad air condition. It also potentially available to "see through" the obstacle (depends on the material, thickness, surface and much more, but it is *possible*).  

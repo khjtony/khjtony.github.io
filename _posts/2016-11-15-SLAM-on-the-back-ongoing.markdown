@@ -162,7 +162,7 @@ sudo adduser $USER dialout
 
 The problem is tf topic. In case that we will mount Lidar on the back (or in hand), how do we know my current position? I do have several 9-axis sensors, so I need to estimate my position by using some technology.
 
-*BTW, I strongly recommand BNO055, 9-axis motion sensor from Bosch, which has a cortex-M0 inside, and just output filtered and converted data ready to use.*
+*BTW, I strongly recommend BNO055, 9-axis motion sensor from Bosch, which has a cortex-M0 inside, and just output filtered and converted data ready to use.*
 
 By some googling, I can use [robot_localization](http://docs.ros.org/kinetic/api/robot_localization/html/) package from ROS.
 It seems like this package is not straight forward, but I will look into it. Nevertheless, I can write my own estimator. 
@@ -175,7 +175,7 @@ This is quick start video about robot_localization on ROSCON conference. It prov
 Though I am still not sure about different frames (base_link, odom, map), I can feed necessary data into base_link frame to see if this node can give me estimated location/position.
 
 #### REP 103 & REP 105
-REP referes to Ros Enhancement Proposal, it contains group of suggestions and cenventions that making different developers have "the same tone".  
+REP referes to Ros Enhancement Proposal, it contains group of suggestions and conventions that making different developers have "the same tone".  
 [REP 103](http://www.ros.org/reps/rep-0103.html) proposes **Standard Units of Measure and Coordinate Conventions**  
 [REP 105](http://www.ros.org/reps/rep-0105.html) proposes **Coordinate Frames for Mobile Platforms**  
 

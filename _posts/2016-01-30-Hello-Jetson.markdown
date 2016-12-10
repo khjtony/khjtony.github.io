@@ -3,10 +3,10 @@ title: Hello Jetson! And possible problem
 date: 2016-01-30 15:14:10
 last_update: 20160130
 categories: Project
-project: AR
+project: Others
 ---
 
-![RTL-SDR]({{ site.baseurl }}/images/AugmentReality/jetson/jetson_banner.png)
+![Jetson]({{ site.baseurl }}/images/AugmentReality/jetson/jetson_banner.png)
 
 ## Post overview
 >* What is Jetson
