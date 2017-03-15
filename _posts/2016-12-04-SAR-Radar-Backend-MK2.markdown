@@ -45,5 +45,9 @@ Also, we found that radar output signal strength is directly related to the refl
 
 ## PSoC analog design validation
 
+## Schematic Design and layout
+**Date on the board should be Feb.7 2017**  
+![backend_MKII_Finished]({{ site.baseurl }}/images/UAV/sar_radar_backend/backend_MKII_Finished.jpg)
+
 ---
-*Last update: DEC.04 2016*  
+*Last update: March.15 2017*  

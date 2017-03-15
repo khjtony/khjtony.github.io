@@ -1,13 +1,13 @@
 ---
 title: Deliver Robot MK0
 date: 2016-11-23 00:50:43
-last_update: 20161214
+last_update: 20170313
 categories: Project
-project: UAV
+project: DeliverVehicle
 
 ---
 
-![demo_banner]({{ site.baseurl }}/images/UAV/vibration_tester/vibration_banner.png)
+![demo_banner]({{ site.baseurl }}/images/DeliverVehicle/demo_vehicle_banner.png)
 
 >* Introduction
 >* System introduction
@@ -31,9 +31,10 @@ The food deliver robot can be divided into two parts: service platform on the cl
 1. 11:50am: Deliver robot dispatched again, and I have more than 15 minutes to enjoy my lunch.  
 
 ## Development schedule/roadmap 
-![develop_schedule]({{ site.baseurl }}/images/UAV/deliver_robot/deliver_robot_mk0/schedule.png)
+<iframe frameborder="0" style="width:100%;height:714px;" src="https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=deliver_robot#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D0BwNgzpaDUeYWSHRmZW5OTWlGRlk%26export%3Ddownload"></iframe>
 
 The development will have three milestones or three stages: MK0, MK1 and MK2.  
+Green parts refer to finished goals, and white parts represent future goals.  
 MK0 is validation study, and I will exam all the technical critical points either in prototype design or in the simulation. As shown in the schedule/roadmap, I will push the project from three ways: software, hardware and auto-pilot. Green node means the topic that I have done, and pink node means the topics on-going. 
 
 ## Market Survey  
@@ -46,6 +47,7 @@ I asked four students for the following questions:
 
 
 ## Possible risks and challenges
+
 ### Moving base  
 At very beginning, when we do not have solid design on deliver vehicle design, we will use the off the shelf experimental purpose robot vehicle instead. Though the ideal options would be some ground robot platform including Husky, RP2 and turtlebot which support ROS natively, I will choose a fairly cheap platform and make it compatible with my workspace. 
 
@@ -55,9 +57,6 @@ In practice, the baseline is using SLAM method to passively avoid collision with
 
 ### User-friendly GUI  
 This GUI consists of front-end and back-end server. Front-end GUI will be a website that allows users put order and choose deliver time & location. Back-end server will have a deliver robot scheduler and interface/protocol to the business/vendor's system, or just show order information to the sellers. 
-
-## Next step
-[Waiting for editing]
 
 ---
 *Last update: Dec.15 2016*
