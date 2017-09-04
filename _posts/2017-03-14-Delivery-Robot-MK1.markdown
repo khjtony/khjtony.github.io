@@ -1,5 +1,5 @@
 ---
-title: Deliver Robot MK1
+title: Delivery Robot MK1
 date: 2017-03-14 00:50:43
 last_update: 20170314
 categories: Project
