@@ -15,10 +15,10 @@ project: AR
 >* Attachment
 
 ## Introduction
-This post should have been done back to late-2015, but I am lazy. Now I post it out, and you will see some information points, and my schematic. Following the [previous test]({{ site.baseurl }}project/2015/05/15/Test-DWM1000-UWB-Module-with-Arduino.html), I found that DWM1000 is promising, so I wanted to build a more legit and compact PCB carrier to setup a working DWM1000 ranging system.  
+This post should have been done back to late-2015, but I am lazy. Now I post it out, and you will see some information points, and my schematic. Following the [previous test]({{ site.baseurl }}/project/2015/05/15/Test-DWM1000-UWB-Module-with-Arduino.html), I found that DWM1000 is promising, so I wanted to build a more legit and compact PCB carrier to setup a working DWM1000 ranging system.  
 
 This design was tested and verified during the [2016 Hackdavis](http://hackdavis.io/2016/).  
-And, special thanks to [Jonathan Tao](http://jgtao.me/content/09-28-17/). 
+And, special thanks to [Jonathan Tao](http://jgtao.me/). 
 
 ## Things to know  
 Here are somethings need to know in advance, both on legal side and technical side. 
