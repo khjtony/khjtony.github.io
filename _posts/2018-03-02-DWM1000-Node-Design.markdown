@@ -39,9 +39,9 @@ Most of the GPIOs, and UART interfaces are strong-drive, so many general purpose
 ![Schematic]({{ site.baseurl }}/images/others/DWM1000/DWM1000_GEN3_Sch.png)
 
 ## Attachment
-[Schematic]({{ site.baseurl }}/images/others/DWM1000/completeNodeSCH_ver3.pdf)  
-[Layout]({{ site.baseurl }}/images/others/DWM1000/completeNode_ver3.pdf)    
-[Eagle project]({{ site.baseurl }}/images/others/DWM1000/NodeGen3.zip)  
+[Schematic]({{ site.baseurl }}/images/others/DWM1000/dwm1000NodeGen3/completeNodeSCH_ver3.pdf)  
+[Layout]({{ site.baseurl }}/images/others/DWM1000/dwm1000NodeGen3/completeNode_ver3.pdf)    
+[Eagle project]({{ site.baseurl }}/images/others/DWM1000/dwm1000NodeGen3/NodeGen3.zip)  
 
 --- 
 *Last update: March.2.2018*
