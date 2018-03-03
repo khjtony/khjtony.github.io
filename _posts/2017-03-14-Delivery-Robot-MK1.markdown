@@ -25,7 +25,7 @@ This test validate the system integration and shows the feasibility that a self-
 
 
 ## System design 
-According to the road map in [Deliver robot MK0]({{ site.baseurl }}/project/2016/11/23/Deliver-Robot-MK0.html), this MKI model consists of the following subsystems:  
+According to the road map in [Deliver robot MK0]({{ site.baseurl }}/project/2016/11/22/Delivery-Robot-MK0.html), this MKI model consists of the following subsystems:  
 
 * 4WD vehidle body from Seeeduino  
 * Odroid C2 Single-board Computer
