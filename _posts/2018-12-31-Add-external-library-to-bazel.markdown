@@ -1,5 +1,5 @@
 ---
-title: Add external library into Bazel project(on editing)
+title: Add external library into Bazel project
 date: 2018-12-31 21:23:00
 last_update: 20181231
 categories: Programming
